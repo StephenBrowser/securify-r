@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure Access Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #331c00, #4a2e00, #663f00);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background-color: #1c1c1c;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 122, 0, 0.4);
+      width: 320px;
+      text-align: center;
+    }
+
+    .login-box img {
+      width: 60px;
+      margin-bottom: 1rem;
+    }
+
+    .login-box h2 {
+      margin-bottom: 1.2rem;
+      font-weight: 400;
+      color: #ff9900;
+    }
+
+    .input-group {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+      color: #ffcc99;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 0.6rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #2e2e2e;
+      color: white;
+    }
+
+    .input-group input:focus {
+      outline: 2px solid #ff9900;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #ff7a00;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .login-box button:hover {
+      background-color: #e66a00;
+    }
+
+    .note {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Lock Icon" />
+    <h2>Secure Login</h2>
+    <form id="login-form">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" required />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required />
+      </div>
+      <button type="submit">Enter</button>
+    </form>
+    <div class="note">Credentials are not stored or saved.</div>
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // No storage or validation; redirect only
+      window.location.href = 'https://example.com';
+    });
+  </script>
+</body>
+</html>
