@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fca738;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  width: 350px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fca738;
+  margin-bottom: 30px;
+}
+
+.logo .icon {
+  font-size: 30px;
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #efefef;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.password-container {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  font-size: 16px;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login {
+  background-color: #fca738;
+  color: white;
+}
+
+.login:hover {
+  background-color: #e69728;
+}
+
+.signup {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.signup:hover {
+  background-color: #e0e0e0;
+}
