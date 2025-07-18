@@ -32,9 +32,8 @@ body {
 }
 
 .logo .icon {
-  font-size: 30px;
-  transform: rotate(180deg);
-  margin-right: 10px;
+  width: 350px;
+  padding: 30px 40px;
 }
 
 label {
