@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-+sU5ZgHbNWr0EVSZkHbYrTqLVaFi3cMrMKk+DbT0DhLM5mG7AH3Kj6vke7RCz0Sn1AXSrdI1zCUtz3C8o9c3Kw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div class="container">
@@ -22,12 +22,12 @@
         <label for="password">Password</label>
         <div class="password-container">
           <input type="password" id="password" name="password" placeholder="Ex. $3cURi5y" autocomplete="new-password"/>
-          <i class="View" id="togglePassword"></i>
+          <span id="togglePassword">View</span>
         </div>
 
         <div class="buttons">
           <button type="submit" class="login">Log In</button>
-          <button type="signin" class="signup">Sign Up</button>
+          <button type="signin" class="login" onclick="location.href='/signupuser=029039103.html'">Sign Up</button>
         </div>
       </form>
     </div>
@@ -40,9 +40,9 @@
     togglePassword.addEventListener("click", () => {
       const isPassword = password.type === "password";
       password.type = isPassword ? "text" : "password";
-      togglePassword.classList.toggle("View");
-      togglePassword.classList.toggle("Hide");
+      togglePassword.textContent = isPassword ? "Hide" : "View";
     });
   </script>
 </body>
 </html>
+
