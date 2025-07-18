@@ -12,23 +12,22 @@
 <body>
   <div class="container">
     <div class="login-box">
-      <div class="logo">
-        <div class="icon"><img src="securify.png" width="200" height="62.86"></div>
-        
-      </div>
+      
+        <div class="icon"><img src="securify.png" width="200" height="70"></div>
+      
       <form action="https://example.com" method="get" autocomplete="off">
         <label for="username">Username / Email</label>
-        <input type="text" id="username" name="username" placeholder="thisisanemail@gmail.com" autocomplete="off"/>
+        <input type="text" id="username" name="username" placeholder="Ex. securify@gmail.com or SecurifyAccount" autocomplete="off"/>
 
         <label for="password">Password</label>
         <div class="password-container">
-          <input type="password" id="password" name="password" placeholder="•••••••" autocomplete="new-password"/>
-          <i class="fas fa-eye-slash eye-icon" id="togglePassword"></i>
+          <input type="password" id="password" name="password" placeholder="Ex. $3cURi5y" autocomplete="new-password"/>
+          <i class="View" id="togglePassword"></i>
         </div>
 
         <div class="buttons">
           <button type="submit" class="login">Log In</button>
-          <button type="submit" class="signup">Sign Up</button>
+          <button type="signin" class="signup">Sign Up</button>
         </div>
       </form>
     </div>
@@ -41,8 +40,8 @@
     togglePassword.addEventListener("click", () => {
       const isPassword = password.type === "password";
       password.type = isPassword ? "text" : "password";
-      togglePassword.classList.toggle("fa-eye");
-      togglePassword.classList.toggle("fa-eye-slash");
+      togglePassword.classList.toggle("View");
+      togglePassword.classList.toggle("Hide");
     });
   </script>
 </body>
